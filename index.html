@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Elementos do DOM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<script src="script.js"></script>
+
+<div>
+    <h2>getElementById</h2>
+
+    <div id="getElementById">
+        <h4>Exemplo funcional</h4>
+        <label id="text">Texto</label><br>
+        <button onclick="normal()">normal</button>
+        <button onclick="negrito()">negrito</button>
+    </div>
+
+    <h4 class="codigoexercicio">Código do exercício</h4>
+    <pre>
+        <code class="codigo">
+            function normal() { 
+                var element_text = document.getElementById("text"); 
+                element_text.style.fontWeight = "normal"; 
+            }
+
+            function negrito() {
+                var element_text = document.getElementById("text");
+                element_text.style.fontWeight = "bold";
+            }
+        </code>
+    </pre>
+</div>
+
+
+<div>
+    <h2>getElementsByClassName</h2>
+    <div id="getElementsByClassName">
+        <h4>Exemplo funcional</h4>
+
+        <p class="destaque">Este é um parágrafo destacado.</p>
+        <p>Este é um parágrafo não destacado.</p>
+        <p class="destaque">Este é outro parágrafo destacado.</p>
+        <button onclick="mostrar_destacados()">Destacados</button>
+    </div>
+
+    <h4 id="exercicio2" class="codigoexercicio">Código do exercício</h4>
+    <pre>
+        <code class="codigo">
+            function mostrar_destacados() {
+                var elementos_destaque = document.getElementsByClassName("destaque");
+
+                for (var i = 0; i < elementos_destaque.length; i++) {
+                        elementos_destaque[i].innerHTML += " - Este parágrafo usa a class destaque!";
+                }
+            } 
+        </code>
+    </pre>
+</div>
+
+
+<div>
+    <h2>getElementsByTagName</h2>
+    <h4>Exemplo funcional</h4>
+    <p>Mostra o número de elementos com a tag h4</p><br>
+    <button onclick="revelar()">Calcular número</button>
+    <p>texto1</p>
+    <p>texto2</p>
+
+    <h4 id="exercicio3" class="codigoexercicio">Código do exercício</h4>
+    <pre>
+        <code id="codigo3" class="codigo">
+            function revelar() {
+                var numelementos = document.getElementsByTagName("p");
+                alert(`Há um total de ${numelementos.length} chamadas da tag <p>!`);
+            }
+        </code>
+    </pre>
+
+</div>
+
+
+<div>
+    <h2>createElement</h2>
+
+    <h4>Exemplo funcional</h4>
+    <button onclick="inserir_html()">Inserir Html</button>
+
+    <h4 id="exercicio4" class="codigoexercicio">Código do exercício</h4>
+    <pre>
+        <code id="codigo4" class="codigo">
+            function inserir_html() {
+                var nova_div = document.createElement("div");
+
+                var conteudo = document.createTextNode("Olá, e seja bem vindo!");
+
+                nova_div.appendChild(conteudo);
+
+                var div_atual = document.getElementById("div1");
+                document.body.insertBefore(nova_div, div_atual);
+            }
+        </code>
+    </pre>
+</div>
+
+</body>
+</html>

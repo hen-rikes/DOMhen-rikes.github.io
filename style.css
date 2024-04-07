@@ -1,0 +1,52 @@
+.codigo {
+    position: relative;
+    left: 250px;
+    bottom: 60px;
+    font-size: 18px;
+}
+
+#getElementById {
+    position: relative;
+    font-size: 24px;
+    top: 80px;
+}
+
+.codigoexercicio {
+    position: relative;
+    left: 370px;
+    bottom: 65px;
+}
+
+h4 {
+    font-size: 24px;
+}
+
+.destaque {
+    color: red;
+    font-size: 14px;
+}
+
+#exercicio2 {
+    bottom: 205px;
+}
+
+#exercicio3 {
+    bottom: 228px;
+}
+
+#codigo3 {
+    bottom: 200px;
+}
+
+#exercicio4 {
+    bottom: 110px;
+}
+
+#codigo4 {
+    bottom: 130px;
+}
+
+#conteudo {
+    bottom: 300px;
+    color: blue;
+}
