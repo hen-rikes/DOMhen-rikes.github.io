@@ -44,7 +44,9 @@ function mostrar_destacados() {
 // getElementsByTagName
 function revelar() {
     var numelementos = document.getElementsByTagName("p");
-    alert(`Há um total de ${numelementos.length} chamadas da tag <p>!`);
+
+    var resultadocalculo = document.getElementById("resultadocalculo");
+    resultadocalculo.innerHTML = `${numelementos.length}`;
 }
 
 // createElement

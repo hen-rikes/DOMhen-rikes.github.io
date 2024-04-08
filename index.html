@@ -41,9 +41,9 @@
     <div id="getElementsByClassName">
         <h4>Exemplo funcional</h4>
 
-        <p class="destaque">Este é um parágrafo destacado.</p>
-        <p>Este é um parágrafo não destacado.</p>
-        <p class="destaque">Este é outro parágrafo destacado.</p>
+        <label class="destaque">Este é um parágrafo destacado.</label><br>
+        <label>Este é um parágrafo não destacado.</label><br>
+        <label class="destaque">Este é outro parágrafo destacado.</label><br><br>
         <button onclick="mostrar_destacados()">Destacados</button>
     </div>
 
@@ -65,24 +65,28 @@
 <div>
     <h2>getElementsByTagName</h2>
     <h4>Exemplo funcional</h4>
-    <p>Mostra o número de elementos com a tag p</p>
-    <br>
-    <button onclick="revelar()">Calcular número</button>
-    <p>Paragrafo 1</p>
-    <p>Paragrafo 2</p>
+    <label>Mostra o número de tags &lt;p&gt; dos paragrafos abaixo.</label>
+    <br><br><br>
+    <label>Texto:</label>
+    <p class="paragrafo">Paragrafo 1</p>
+    <p class="paragrafo">Paragrafo 2</p>
+    <button onclick="revelar()">Calcular número</button><br><br>
+    <label>Quantidade de elementos que usam a tag &lt;p&gt;:</label>
+    <div id="resultadocalculo"></div>
 
     <h4 id="exercicio3" class="codigoexercicio">Código do exercício</h4>
     <pre>
         <code id="codigo3" class="codigo">
             function revelar() {
                 var numelementos = document.getElementsByTagName("p");
-                alert(`Há um total de ${numelementos.length} chamadas da tag p!`);
+            
+                var resultadocalculo = document.getElementById("resultadocalculo");
+                resultadocalculo.innerHTML = `${numelementos.length}`;
             }
         </code>
     </pre>
 
 </div>
-
 
 <div>
     <h2>createElement</h2>

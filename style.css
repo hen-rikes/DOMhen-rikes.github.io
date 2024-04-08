@@ -31,11 +31,13 @@ h4 {
 }
 
 #exercicio3 {
-    bottom: 228px;
+    left: 480px;
+    bottom: 300px;
 }
 
 #codigo3 {
-    bottom: 200px;
+    left: 370px;
+    bottom: 280px;
 }
 
 #exercicio4 {
@@ -49,4 +51,12 @@ h4 {
 #conteudo {
     bottom: 300px;
     color: blue;
+}
+
+.paragrafo {
+    font-weight: Bold;
+}
+
+#resultadocalculo {
+    font-weight: bold;
 }
